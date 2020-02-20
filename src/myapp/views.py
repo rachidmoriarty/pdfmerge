@@ -15,3 +15,12 @@ class ShowHelloWorld(TemplateView):
         context = super().get_context_data(**kwargs)
         context['demo_content'] = DemoModel.objects.all()
         return context
+
+class Home(TemplateView):
+    template_name = 'index.html'
+
+    def get(self, *args, **kwargs):
+        return super().get(*args, **kwargs)
+
+
+

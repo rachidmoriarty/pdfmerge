@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-from myapp.views import ShowHelloWorld
+from myapp.views import ShowHelloWorld, Home
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', ShowHelloWorld.as_view()),
+    url(r'^$', Home.as_view()),
+    url(r'^accounts/profile/', ShowHelloWorld.as_view()),
+    
     url(r'^accounts/', include('allauth.urls'))
 
 ]

@@ -29,7 +29,8 @@ ALLOWED_HOSTS = ['web', '172.18.18.250']
 
 
 # Application definition
-
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
